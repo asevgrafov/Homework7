@@ -21,8 +21,8 @@ class PostOrders(View):
         print(body)
         i_id = body['id']
         order = await self.get_order(i_id)
-        created_row_date = Orders(id=body['id'],
-                                  status=body['status'])
+        created_row_date = Orders(id=order['id'],
+                                  status=order['status'])
         if order is None:
             schema = self.read_file(path1)
             jsonschema.validate(body, schema)
