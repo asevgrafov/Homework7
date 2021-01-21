@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "examples": [
+    {
+      "id": "43er3",
+      "status": "done"
+    }
+  ],
+  "required": [
+    "id",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "pattern": "[a-z0-9]{2,5}",
+      "default": 0,
+      "examples": [
+        "43er3"
+      ]
+    },
+    "status": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "pattern": "^[a-z_]{1,11}$",
+      "examples": [
+        "done"
+      ]
+    }
+  }
+}

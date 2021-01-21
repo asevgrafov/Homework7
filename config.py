@@ -1,0 +1,19 @@
+import os
+
+env = os.environ.get
+
+DEBUG = int(env("DEBUG", 1))
+ENABLE_AUTORELOAD = int(env("ENABLE_AUTORELOAD", 1))
+
+API_SERVER_HOST = env("API_SERVER_HOST", "0.0.0.0")
+API_SERVER_PORT = int(env("API_SERVER_PORT", 8081))
+
+
+#  Конфигурация postgres
+POSTGRES_USER = env("POSTGRES_USER", "postgres")
+POSTGRES_PASSWORD = env("POSTGRES_PASSWORD", "postgres")
+POSTGRES_HOST = env("POSTGRES_HOST", "127.0.0.1")
+POSTGRES_PORT = env("POSTGRES_PORT", "5432")
+POSTGRES_DB = env("POSTGRES_DB", "orders")
+
+ENGINE_STRING = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"

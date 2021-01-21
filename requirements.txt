@@ -1,0 +1,5 @@
+aiohttp==3.6.2
+aiohttp_autoreload==0.0.1
+aiopg==1.0.0
+#go==1.2.0
+SQLAlchemy~=1.3.22
